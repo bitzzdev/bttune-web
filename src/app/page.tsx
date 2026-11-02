@@ -19,8 +19,6 @@ import FlexCarousel, { CarouselItem } from "@/components/FlexCarousel";
 import OptionWheel from "@/components/OptionWheel";
 import SpecularButton from "@/components/SpecularButton";
 import { GithubIcon } from "@/components/GithubIcon";
-import { Ascii } from "ascii.rest/react";
-import { earthrise } from "ascii.rest/pieces";
 import {
   APP_NAME,
   APP_CONFIG,
@@ -503,7 +501,7 @@ export default function RedesignedLanding() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-16">
           {currentCapabilityGroup.items.map((item, idx) => (
             <div key={idx} className="space-y-3">
-              <span className="text-xs font-mono text-neutral-500 uppercase">
+              <span className="text-xs text-neutral-500 uppercase tracking-wider">
                 {item.badge}
               </span>
               <h3 className="text-xl font-normal text-white">{item.title}</h3>
@@ -727,7 +725,7 @@ export default function RedesignedLanding() {
                 <div className="flex flex-col gap-1">
                   <h3 className="text-lg font-medium text-white">{member.name}</h3>
                   {member.handle && (
-                    <span className="text-[11px] font-mono text-neutral-400">
+                    <span className="text-[11px] text-neutral-400">
                       @{member.handle}
                     </span>
                   )}
@@ -813,25 +811,10 @@ export default function RedesignedLanding() {
       </section>
 
       {/* =========================================================================
-          FOOTER WITH ASCII EARTHRISE BACKGROUND (FULL VIEWPORT WIDTH)
+          FOOTER
           ========================================================================= */}
-      <footer className="relative w-full overflow-hidden border-t border-white/10 bg-[#030408] text-xs font-normal text-neutral-400 py-24 sm:py-28 px-6 sm:px-8">
-        {/* Full Viewport-Width Animated ASCII Earthrise Background */}
-        <div className="absolute inset-0 w-full h-full overflow-hidden pointer-events-none select-none flex items-center justify-center z-0">
-          <div className="w-full min-w-[100vw] h-full flex items-center justify-center opacity-30 sm:opacity-40 scale-105">
-            <Ascii
-              piece={earthrise}
-              className="w-full min-w-[100vw] h-full object-cover"
-              label="Earthrise viewed from lunar orbit ASCII background"
-            />
-          </div>
-          {/* Gradients to ensure text readability across all displays */}
-          <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/50 to-black/95 pointer-events-none" />
-          <div className="absolute inset-0 bg-radial from-transparent via-black/30 to-black/90 pointer-events-none" />
-        </div>
-
-        {/* Footer Content Layered Directly On Top */}
-        <div className="relative z-10 max-w-6xl mx-auto space-y-16">
+      <footer className="relative w-full border-t border-white/5 bg-black text-xs font-normal text-neutral-400 py-20 px-6 sm:px-8">
+        <div className="max-w-6xl mx-auto space-y-16">
           {/* Top Row: Mission & Developer Highlights */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
             <div className="lg:col-span-5 space-y-4">
@@ -846,22 +829,15 @@ export default function RedesignedLanding() {
                 <span className="font-medium tracking-tight text-xl text-white">
                   {APP_NAME}
                 </span>
-                <span className="text-[10px] font-mono uppercase tracking-widest px-2 py-0.5 rounded-full bg-white/10 text-neutral-300 border border-white/10">
-                  Open Source
-                </span>
               </div>
               <p className="text-sm text-neutral-300 leading-relaxed max-w-sm">
-                Subscription-free, zero-ad audio streaming client for Android with native Jetpack Compose, 8D Spatial DSP virtualization, and offline playback.
+                Subscription-free, zero-ad audio streaming client for Android with native Jetpack Compose, 8D Spatial DSP virtualization, and persistent offline playback.
               </p>
-              <div className="flex items-center gap-2 text-[11px] font-mono text-neutral-400 pt-1">
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-                <span>Earthrise Lunar Orbit Telemetry • 15 FPS</span>
-              </div>
             </div>
 
             <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-3 gap-8 text-xs">
               <div className="space-y-3">
-                <p className="font-mono uppercase tracking-wider text-neutral-500 text-[11px]">
+                <p className="font-medium uppercase tracking-wider text-neutral-500 text-[11px]">
                   Core Developers
                 </p>
                 <div className="space-y-2">
@@ -874,7 +850,7 @@ export default function RedesignedLanding() {
                     >
                       Biswajit Tanti
                     </a>
-                    <span className="text-[11px] font-mono text-neutral-400 block">
+                    <span className="text-[11px] text-neutral-400 block">
                       @biswaa.dev
                     </span>
                     <a
@@ -895,7 +871,7 @@ export default function RedesignedLanding() {
                     >
                       Dev Borah
                     </a>
-                    <span className="text-[11px] font-mono text-neutral-400 block">
+                    <span className="text-[11px] text-neutral-400 block">
                       @bitz.dev (bitzzdev)
                     </span>
                     <a
@@ -919,7 +895,7 @@ export default function RedesignedLanding() {
               </div>
 
               <div className="space-y-3">
-                <p className="font-mono uppercase tracking-wider text-neutral-500 text-[11px]">
+                <p className="font-medium uppercase tracking-wider text-neutral-500 text-[11px]">
                   Navigation
                 </p>
                 <ul className="space-y-2 text-neutral-400">
@@ -957,7 +933,7 @@ export default function RedesignedLanding() {
               </div>
 
               <div className="space-y-3">
-                <p className="font-mono uppercase tracking-wider text-neutral-500 text-[11px]">
+                <p className="font-medium uppercase tracking-wider text-neutral-500 text-[11px]">
                   Project &amp; Code
                 </p>
                 <ul className="space-y-2 text-neutral-400">
@@ -1007,7 +983,7 @@ export default function RedesignedLanding() {
           </div>
 
           {/* Bottom Bar: Copyright & Attribution */}
-          <div className="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-neutral-400 text-xs">
+          <div className="pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4 text-neutral-400 text-xs">
             <div className="flex items-center gap-2">
               <Image
                 src="/assets/no-bg.svg"
