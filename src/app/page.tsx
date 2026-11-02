@@ -817,7 +817,7 @@ export default function RedesignedLanding() {
       {/* =========================================================================
           FOOTER
           ========================================================================= */}
-      <footer className="relative w-full border-t border-white/5 bg-black text-xs font-normal text-neutral-400 py-20 px-6 sm:px-8">
+      <footer className="relative w-full overflow-hidden border-t border-white/5 bg-black text-xs font-normal text-neutral-400 pt-20 pb-0 px-6 sm:px-8">
         <div className="max-w-6xl mx-auto space-y-16">
           {/* Top Row: Mission & Developer Highlights */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
@@ -1020,6 +1020,13 @@ export default function RedesignedLanding() {
               </a>
             </div>
           </div>
+        </div>
+
+        {/* Giant Cropped "Orbit" Display Wordmark Half Going Off-Screen */}
+        <div className="relative w-full flex justify-center items-end select-none pointer-events-none overflow-hidden mt-12 sm:mt-16">
+          <span className="text-[22vw] font-bold tracking-tighter leading-none bg-gradient-to-b from-white/15 via-white/[0.08] to-transparent bg-clip-text text-transparent translate-y-[45%] inline-block whitespace-nowrap text-center">
+            {APP_NAME}
+          </span>
         </div>
       </footer>
     </div>
