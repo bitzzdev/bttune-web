@@ -10,6 +10,7 @@ import {
   ExternalLink,
   ChevronDown,
   ArrowRight,
+  ArrowUpRight,
   Music2,
   Sparkles,
 } from "lucide-react";
@@ -740,26 +741,29 @@ export default function RedesignedLanding() {
                   href={member.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-xs text-neutral-400 hover:text-white transition"
+                  className="inline-flex items-center gap-1 text-xs text-neutral-400 hover:text-white transition"
                 >
-                  GitHub
+                  <span>GitHub</span>
+                  <ArrowUpRight className="w-3 h-3 text-neutral-500" />
                 </a>
                 <a
                   href={member.website}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-xs text-neutral-400 hover:text-white transition"
+                  className="inline-flex items-center gap-1 text-xs text-neutral-400 hover:text-white transition"
                 >
-                  Website
+                  <span>Website</span>
+                  <ArrowUpRight className="w-3 h-3 text-neutral-500" />
                 </a>
                 {member.instagram && (
                   <a
                     href={member.instagram}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-xs text-neutral-400 hover:text-white transition"
+                    className="inline-flex items-center gap-1 text-xs text-neutral-400 hover:text-white transition"
                   >
-                    Instagram
+                    <span>Instagram</span>
+                    <ArrowUpRight className="w-3 h-3 text-neutral-500" />
                   </a>
                 )}
               </div>
@@ -846,9 +850,10 @@ export default function RedesignedLanding() {
                       href="https://biswadev.vercel.app/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-white hover:text-white transition font-medium block"
+                      className="inline-flex items-center gap-1 text-white hover:text-white transition font-medium"
                     >
-                      Biswajit Tanti
+                      <span>Biswajit Tanti</span>
+                      <ArrowUpRight className="w-3 h-3 text-neutral-500" />
                     </a>
                     <span className="text-[11px] text-neutral-400 block">
                       @biswaa.dev
@@ -857,9 +862,10 @@ export default function RedesignedLanding() {
                       href="https://www.instagram.com/biswaa.dev"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-[11px] text-neutral-400 hover:text-neutral-200 transition"
+                      className="inline-flex items-center gap-1 text-[11px] text-neutral-400 hover:text-neutral-200 transition"
                     >
-                      Instagram ↗
+                      <span>Instagram</span>
+                      <ArrowUpRight className="w-2.5 h-2.5 text-neutral-500" />
                     </a>
                   </div>
                   <div className="pt-2 border-t border-white/5">
@@ -867,9 +873,10 @@ export default function RedesignedLanding() {
                       href="https://bitz.is-a.dev"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-white hover:text-white transition font-medium block"
+                      className="inline-flex items-center gap-1 text-white hover:text-white transition font-medium"
                     >
-                      Dev Borah
+                      <span>Dev Borah</span>
+                      <ArrowUpRight className="w-3 h-3 text-neutral-500" />
                     </a>
                     <span className="text-[11px] text-neutral-400 block">
                       @bitz.dev (bitzzdev)
@@ -878,9 +885,10 @@ export default function RedesignedLanding() {
                       href="https://www.instagram.com/bitz.dev"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-[11px] text-neutral-400 hover:text-neutral-200 transition"
+                      className="inline-flex items-center gap-1 text-[11px] text-neutral-400 hover:text-neutral-200 transition"
                     >
-                      Instagram ↗
+                      <span>Instagram</span>
+                      <ArrowUpRight className="w-2.5 h-2.5 text-neutral-500" />
                     </a>
                   </div>
                   <div className="pt-2 border-t border-white/5">
@@ -942,9 +950,10 @@ export default function RedesignedLanding() {
                       href={APP_CONFIG.repoUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="hover:text-white transition"
+                      className="inline-flex items-center gap-1 hover:text-white transition"
                     >
-                      GitHub Repository ↗
+                      <span>GitHub Repository</span>
+                      <ArrowUpRight className="w-3 h-3 text-neutral-500" />
                     </a>
                   </li>
                   <li>
@@ -952,9 +961,10 @@ export default function RedesignedLanding() {
                       href={APP_CONFIG.releasesUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="hover:text-white transition"
+                      className="inline-flex items-center gap-1 hover:text-white transition"
                     >
-                      GitHub Releases ↗
+                      <span>GitHub Releases</span>
+                      <ArrowUpRight className="w-3 h-3 text-neutral-500" />
                     </a>
                   </li>
                   <li>
@@ -962,9 +972,10 @@ export default function RedesignedLanding() {
                       href="https://github.com/biswaadev/bttune-android/blob/main/LICENSE"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="hover:text-white transition"
+                      className="inline-flex items-center gap-1 hover:text-white transition"
                     >
-                      GPL-3.0 License ↗
+                      <span>GPL-3.0 License</span>
+                      <ArrowUpRight className="w-3 h-3 text-neutral-500" />
                     </a>
                   </li>
                   <li>
@@ -972,9 +983,10 @@ export default function RedesignedLanding() {
                       href={APP_CONFIG.directDownloadUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="hover:text-white transition text-neutral-300"
+                      className="inline-flex items-center gap-1 hover:text-white transition text-neutral-300"
                     >
-                      Direct APK Download ↗
+                      <span>Direct APK Download</span>
+                      <ArrowUpRight className="w-3 h-3 text-neutral-500" />
                     </a>
                   </li>
                 </ul>
