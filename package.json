@@ -5,12 +5,13 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "deploy": "next build && python3 scripts/deploy.py orbitmusic orbitsound orbitsong orbithz orbitdolby orbit-sound orbit-audio orbit-stream",
+    "deploy": "next build && python3 scripts/deploy.py all",
     "start": "next start",
     "lint": "eslint"
   },
   "dependencies": {
     "@types/canvas-confetti": "^1.9.0",
+    "ascii.rest": "^0.4.0",
     "canvas-confetti": "^1.9.4",
     "lucide-react": "^1.66.0",
     "next": "16.4.3",

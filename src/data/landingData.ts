@@ -25,6 +25,58 @@ import {
 
 export const APP_NAME = "Orbit";
 
+export const PRIMARY_DOMAIN = "https://orbitmusic.web.app";
+
+export const ORBIT_DOMAINS = [
+  "orbitmusic.web.app",
+  "orbittune.web.app",
+  "orbitsound.web.app",
+  "orbithz.web.app",
+  "orbitdolby.web.app",
+  "orbitsong.web.app",
+  "orbitaudio.web.app",
+  "orbitstream.web.app",
+  "orbitplayer.web.app",
+  "orbitbeat.web.app",
+  "orbitbeats.web.app",
+  "orbitwave.web.app",
+  "orbitwaves.web.app",
+  "orbitbass.web.app",
+  "orbithifi.web.app",
+  "orbittrack.web.app",
+  "orbittracks.web.app",
+  "orbittunes.web.app",
+  "orbitsounds.web.app",
+  "orbitsongs.web.app",
+];
+
+export const DEVELOPER_DOMAINS = [
+  "bitzzdev.web.app",
+  "bitzdev.web.app",
+  "bitz.web.app",
+  "devborah.web.app",
+  "bitupanborah.web.app",
+  "biswaadev.web.app",
+  "biswadev.web.app",
+  "biswajittanti.web.app",
+];
+
+export const REGIONAL_DOMAINS = [
+  "suno.web.app",
+  "assam.web.app",
+  "zubeen.web.app",
+  "zubeengarg.web.app",
+  "auno.web.app",
+  "oryn.web.app",
+  "veya.web.app",
+];
+
+export const ALL_PRODUCTION_DOMAINS = [
+  ...ORBIT_DOMAINS,
+  ...DEVELOPER_DOMAINS,
+  ...REGIONAL_DOMAINS,
+];
+
 export const APP_CONFIG = {
   name: APP_NAME,
   tagline: "Sound Beyond Limits.",
@@ -38,9 +90,31 @@ export const APP_CONFIG = {
   repoUrl: "https://github.com/biswaadev/bttune-android",
   releasesUrl: "https://github.com/biswaadev/bttune-android/releases",
   directDownloadUrl: "https://github.com/biswaadev/bttune-android/releases/latest",
-  author: "Biswajit Tanti",
+  developers: [
+    {
+      name: "Biswajit Tanti (biswaa.dev)",
+      role: "Lead Developer & Audio Engine Architect",
+      github: "https://github.com/biswaadev",
+      website: "https://biswadev.vercel.app/",
+      instagram: "https://www.instagram.com/biswaa.dev",
+    },
+    {
+      name: "Dev Borah (aka Bitupan Borah / bitzzdev)",
+      role: "Lead Architect, UI/UX Designer & Web/Android Developer",
+      github: "https://github.com/bitzzdev",
+      website: "https://bitz.is-a.dev",
+      instagram: "https://www.instagram.com/bitz.dev",
+    },
+    {
+      name: "Trisan Tanti",
+      role: "Core Android Developer",
+      github: "https://github.com/biswaadev",
+      website: "https://github.com/biswaadev/bttune-android",
+    },
+  ],
+  author: "Biswajit Tanti & Dev Borah",
   authorUrl: "https://biswadev.vercel.app/",
-  contributor: "bitzzdev",
+  contributor: "Dev Borah (Bitupan Borah / bitzzdev)",
   contributorUrl: "https://bitz.is-a.dev",
 };
 
@@ -259,7 +333,8 @@ export const CAPABILITY_CATEGORIES = [
 export const TEAM_MEMBERS = [
   {
     name: "Biswajit Tanti",
-    role: "Lead Developer",
+    handle: "biswaa.dev",
+    role: "Lead Developer & Audio Engine Architect",
     avatar: "https://github.com/biswaadev.png",
     bio: "Lead Developer architecting the application core, modern Kotlin, Jetpack Compose, audio DSP engine, and overall project direction.",
     github: "https://github.com/biswaadev",
@@ -267,21 +342,23 @@ export const TEAM_MEMBERS = [
     instagram: "https://www.instagram.com/biswaa.dev",
   },
   {
+    name: "Dev Borah (aka Bitupan Borah)",
+    handle: "bitzzdev / bitz.dev",
+    role: "Lead Architect, UI/UX Designer & Web/Android Developer",
+    avatar: "https://github.com/bitzzdev.png",
+    bio: "Designing and developing UI/UX experiences for both web and Android apps, cloud architecture, performance optimizations, and release infrastructure.",
+    github: "https://github.com/bitzzdev",
+    website: "https://bitz.is-a.dev",
+    instagram: "https://www.instagram.com/bitz.dev",
+  },
+  {
     name: "Trisan Tanti",
-    role: "Code Developer",
+    handle: "Core Developer",
+    role: "Core Android Developer",
     avatar: "https://github.com/biswaadev.png",
     bio: "Focusing on Android client development, feature implementation, interaction ergonomics, and OEM testing across Android devices.",
     github: "https://github.com/biswaadev",
     website: "https://github.com/biswaadev/bttune-android",
-  },
-  {
-    name: "bitzzdev",
-    role: "UI/UX Designer & Developer (Web & Android)",
-    avatar: "https://github.com/bitzzdev.png",
-    bio: "Designing and developing UI/UX experiences for both web and Android apps, alongside client optimizations and release infrastructure.",
-    github: "https://github.com/bitzzdev",
-    website: "https://bitz.is-a.dev",
-    instagram: "https://www.instagram.com/bitz.dev",
   },
 ];
 

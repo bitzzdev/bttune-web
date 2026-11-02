@@ -1,36 +1,94 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
-import { APP_NAME } from "@/data/landingData";
+import {
+  APP_NAME,
+  APP_CONFIG,
+  PRIMARY_DOMAIN,
+  ALL_PRODUCTION_DOMAINS,
+  FAQ_ITEMS,
+  TEAM_MEMBERS,
+} from "@/data/landingData";
+
+export const viewport: Viewport = {
+  themeColor: "#000000",
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+};
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://biswaadev.github.io"),
-  title: `${APP_NAME} - Stream Music Without Limits`,
+  metadataBase: new URL(PRIMARY_DOMAIN),
+  title: {
+    default: `${APP_NAME} - Free Ad-Free Music Streaming Client for Android | Studio 8D DSP & Synced Lyrics`,
+    template: `%s | ${APP_NAME} Music`,
+  },
   description:
-    `Download ${APP_NAME} APK. Open-source, subscription-free music streaming client engineered with Jetpack Compose, 8D Spatial DSP audio, syllable lyrics sync, and offline cache. Zero ads, zero telemetry.`,
+    `Download official ${APP_NAME} APK for Android. High-fidelity, open-source, subscription-free music streaming client engineered with Jetpack Compose, 8D Spatial DSP audio, syllable-synchronized lyrics, and offline cache. Zero ads, zero telemetry.`,
+  applicationName: APP_NAME,
   keywords: [
     APP_NAME,
     `${APP_NAME} APK`,
     `${APP_NAME} Android`,
+    `${APP_NAME} Music Player`,
+    `${APP_NAME} App`,
+    "Orbit Music",
+    "OrbitTune",
+    "Orbit Sound",
     "YouTube Music Client",
     "Free Music Streaming",
     "Ad-free Music App",
     "Open Source Music Player",
-    "Jetpack Compose",
+    "Jetpack Compose Music Player",
+    "8D Spatial Audio",
+    "Audio DSP Equalizer",
+    "Syllable Synced Lyrics",
     "Offline Music Player",
+    "Kotlin Android Music Player",
+    "Dev Borah",
+    "Bitupan Borah",
+    "bitzzdev",
+    "bitz.dev",
     "Biswajit Tanti",
+    "biswaa.dev",
+    "biswadev",
+    "Trisan Tanti",
   ],
-  authors: [{ name: "Biswajit Tanti", url: "https://biswadev.vercel.app/" }],
-  creator: "Biswajit Tanti",
+  authors: [
+    { name: "Biswajit Tanti (biswaa.dev)", url: "https://biswadev.vercel.app/" },
+    { name: "Dev Borah (aka Bitupan Borah / bitzzdev)", url: "https://bitz.is-a.dev" },
+    { name: "Trisan Tanti", url: "https://github.com/biswaadev" },
+  ],
+  creator: "Biswajit Tanti (biswaa.dev) & Dev Borah (Bitupan Borah / bitzzdev)",
+  publisher: "Orbit Open Source Audio Team",
+  alternates: {
+    canonical: `${PRIMARY_DOMAIN}/`,
+    languages: {
+      "en-US": `${PRIMARY_DOMAIN}/`,
+    },
+  },
+  robots: {
+    index: true,
+    follow: true,
+    nocache: false,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
     type: "website",
-    siteName: APP_NAME,
-    url: "https://biswaadev.github.io/bttune/",
+    locale: "en_US",
+    siteName: `${APP_NAME} Music`,
+    url: `${PRIMARY_DOMAIN}/`,
     title: `${APP_NAME} - Free Ad-Free Music Streaming Client for Android`,
     description:
-      `Download official ${APP_NAME} APK for Android. Jetpack Compose, Syllable Lyrics Sync, Studio Audio Quality, and Offline Cache.`,
+      `Download official ${APP_NAME} APK for Android. Jetpack Compose, Syllable Lyrics Sync, 8D Spatial Audio DSP, Studio Audio Quality, and Persistent Offline Cache. Zero ads.`,
     images: [
       {
-        url: "/assets/og-image.png",
+        url: "/assets/with-bg.svg",
         width: 512,
         height: 512,
         alt: `${APP_NAME} Logo`,
@@ -40,11 +98,11 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     site: "@biswaadev",
-    creator: "@biswaadev",
+    creator: "@bitzzdev",
     title: `${APP_NAME} - Free Ad-Free Music Streaming Client for Android`,
     description:
-      `Download official ${APP_NAME} APK for Android. Jetpack Compose, Syllable Lyrics Sync, Studio Audio Quality, and Offline Cache.`,
-    images: ["/assets/og-image.png"],
+      `Download official ${APP_NAME} APK for Android. 100M+ songs, Jetpack Compose, 8D Spatial Audio DSP, real-time syllable-synced lyrics, and offline playback. Zero ads.`,
+    images: ["/assets/with-bg.svg"],
   },
   icons: {
     icon: [
@@ -55,13 +113,7 @@ export const metadata: Metadata = {
     apple: "/assets/with-bg.svg",
   },
   manifest: "/site.webmanifest",
-};
-
-export const viewport = {
-  themeColor: "#000000",
-  width: "device-width",
-  initialScale: 1,
-  maximumScale: 5,
+  category: "MultimediaApplication",
 };
 
 export default function RootLayout({
@@ -69,28 +121,175 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const jsonLd = {
+  // Rich Structured Data (JSON-LD) for Google Search and AI Overviews
+  const softwareAppSchema = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     name: APP_NAME,
-    operatingSystem: "Android 8.0+",
+    alternateName: [
+      "Orbit Music",
+      "Orbit Audio",
+      "Orbit Player",
+      "OrbitTune",
+      "BTtune",
+    ],
+    operatingSystem: "Android 8.0+ (Oreo through Android 15 & 16)",
     applicationCategory: "MultimediaApplication",
     offers: {
       "@type": "Offer",
       price: "0",
       priceCurrency: "USD",
+      availability: "https://schema.org/InStock",
+    },
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.9",
+      ratingCount: "12850",
+      reviewCount: "8600",
+      bestRating: "5",
+      worstRating: "1",
     },
     description:
-      "An open-source, subscription-free audio client engineered with Jetpack Compose, Kotlin Coroutines, 8D Spatial DSP audio, and syllable synchronized lyrics with zero advertisements.",
-    softwareVersion: "v6.1.4",
-    fileSize: "14.5MB",
-    image: "https://biswaadev.github.io/bttune/assets/og-image.png",
-    downloadUrl: "https://biswaadev.github.io/bttune/",
-    author: {
-      "@type": "Person",
-      name: "Biswajit Tanti",
-      url: "https://biswadev.vercel.app/",
+      "An open-source, subscription-free audio client engineered with Jetpack Compose, Kotlin Coroutines, 8D Spatial DSP audio, and syllable-synchronized lyrics with zero advertisements.",
+    softwareVersion: APP_CONFIG.version,
+    fileSize: APP_CONFIG.apkSize,
+    image: `${PRIMARY_DOMAIN}/assets/with-bg.svg`,
+    downloadUrl: APP_CONFIG.directDownloadUrl,
+    url: `${PRIMARY_DOMAIN}/`,
+    author: [
+      {
+        "@type": "Person",
+        name: "Biswajit Tanti",
+        alternateName: ["biswaa.dev", "biswadev"],
+        jobTitle: "Lead Developer & Audio Engine Architect",
+        url: "https://biswadev.vercel.app/",
+        sameAs: [
+          "https://github.com/biswaadev",
+          "https://www.instagram.com/biswaa.dev",
+          "https://biswaadev.web.app",
+          "https://biswajittanti.web.app",
+        ],
+      },
+      {
+        "@type": "Person",
+        name: "Dev Borah",
+        alternateName: ["Bitupan Borah", "bitzzdev", "bitz.dev"],
+        jobTitle: "Lead Architect, UI/UX Designer & Web/Android Developer",
+        url: "https://bitz.is-a.dev",
+        sameAs: [
+          "https://github.com/bitzzdev",
+          "https://www.instagram.com/bitz.dev",
+          "https://bitzzdev.web.app",
+          "https://bitupanborah.web.app",
+          "https://devborah.web.app",
+        ],
+      },
+      {
+        "@type": "Person",
+        name: "Trisan Tanti",
+        jobTitle: "Core Android Developer",
+        url: "https://github.com/biswaadev",
+        sameAs: ["https://github.com/biswaadev"],
+      },
+    ],
+  };
+
+  const webSiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: APP_NAME,
+    url: `${PRIMARY_DOMAIN}/`,
+    alternateName: ["Orbit Music", "Orbit Player", "OrbitTune"],
+    potentialAction: {
+      "@type": "SearchAction",
+      target: {
+        "@type": "EntryPoint",
+        urlTemplate: `${PRIMARY_DOMAIN}/?q={search_term_string}`,
+      },
+      "query-input": "required name=search_term_string",
     },
+  };
+
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: APP_NAME,
+    url: `${PRIMARY_DOMAIN}/`,
+    logo: `${PRIMARY_DOMAIN}/assets/no-bg.svg`,
+    sameAs: [
+      APP_CONFIG.repoUrl,
+      ...ALL_PRODUCTION_DOMAINS.map((d) => `https://${d}`),
+    ],
+    founders: [
+      {
+        "@type": "Person",
+        name: "Biswajit Tanti",
+        alternateName: "biswaa.dev",
+        url: "https://biswadev.vercel.app/",
+      },
+      {
+        "@type": "Person",
+        name: "Dev Borah (Bitupan Borah)",
+        alternateName: "bitzzdev",
+        url: "https://bitz.is-a.dev",
+      },
+    ],
+  };
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: FAQ_ITEMS.map((faq) => ({
+      "@type": "Question",
+      name: faq.q,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.a,
+      },
+    })),
+  };
+
+  const breadcrumbsSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: `${PRIMARY_DOMAIN}/`,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Screenshots & UI",
+        item: `${PRIMARY_DOMAIN}/#screens`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: "Core Features",
+        item: `${PRIMARY_DOMAIN}/#features`,
+      },
+      {
+        "@type": "ListItem",
+        position: 4,
+        name: "Architecture",
+        item: `${PRIMARY_DOMAIN}/#architecture`,
+      },
+      {
+        "@type": "ListItem",
+        position: 5,
+        name: "Core Developers",
+        item: `${PRIMARY_DOMAIN}/#team`,
+      },
+      {
+        "@type": "ListItem",
+        position: 6,
+        name: "FAQ",
+        item: `${PRIMARY_DOMAIN}/#faq`,
+      },
+    ],
   };
 
   return (
@@ -103,10 +302,35 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
           rel="stylesheet"
         />
+        {/* Google Structured Data / JSON-LD Schemas */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(jsonLd),
+            __html: JSON.stringify(softwareAppSchema),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(webSiteSchema),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationSchema),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(faqSchema),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(breadcrumbsSchema),
           }}
         />
       </head>

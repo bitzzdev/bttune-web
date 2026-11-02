@@ -19,9 +19,14 @@ import FlexCarousel, { CarouselItem } from "@/components/FlexCarousel";
 import OptionWheel from "@/components/OptionWheel";
 import SpecularButton from "@/components/SpecularButton";
 import { GithubIcon } from "@/components/GithubIcon";
+import { Ascii } from "ascii.rest/react";
+import { earthrise } from "ascii.rest/pieces";
 import {
   APP_NAME,
   APP_CONFIG,
+  PRIMARY_DOMAIN,
+  ORBIT_DOMAINS,
+  DEVELOPER_DOMAINS,
   ARCHITECTURE_LAYERS,
   CAPABILITY_CATEGORIES,
   TEAM_MEMBERS,
@@ -690,16 +695,19 @@ export default function RedesignedLanding() {
       </section>
 
       {/* =========================================================================
-          SECTION 7: TEAM
+          SECTION 7: TEAM / CORE DEVELOPERS
           ========================================================================= */}
       <section id="team" className="py-36 px-8 max-w-6xl mx-auto border-t border-white/5">
         <div className="mb-24">
           <p className="text-xs font-normal text-neutral-500 uppercase tracking-widest mb-3">
-            Open Source
+            Core Engineering & Design
           </p>
           <h2 className="text-huge-section text-white tracking-tight">
-            The Contributors.
+            The Developers.
           </h2>
+          <p className="mt-4 text-sm text-neutral-400 max-w-xl">
+            Meet the architects and developers engineering {APP_NAME} from scratch — combining native Android DSP audio systems, clean UI/UX, and scalable web infrastructure.
+          </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
@@ -716,8 +724,15 @@ export default function RedesignedLanding() {
                 />
               </div>
               <div>
-                <h3 className="text-lg font-normal text-white">{member.name}</h3>
-                <p className="text-xs font-normal text-neutral-500">{member.role}</p>
+                <div className="flex flex-col gap-1">
+                  <h3 className="text-lg font-medium text-white">{member.name}</h3>
+                  {member.handle && (
+                    <span className="text-[11px] font-mono text-neutral-400">
+                      @{member.handle}
+                    </span>
+                  )}
+                </div>
+                <p className="text-xs font-normal text-neutral-500 mt-1">{member.role}</p>
               </div>
               <p className="text-sm font-normal text-neutral-400 leading-relaxed">
                 {member.bio}
@@ -798,38 +813,94 @@ export default function RedesignedLanding() {
       </section>
 
       {/* =========================================================================
-          FOOTER
+          FOOTER WITH ASCII EARTHRISE
           ========================================================================= */}
       <footer className="py-20 px-8 border-t border-white/5 text-xs font-normal text-neutral-500">
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4">
-            <div className="flex items-center gap-2">
-              <Image
-                src="/assets/no-bg.svg"
-                alt={`${APP_NAME} Logo`}
-                width={16}
-                height={16}
-                className="w-4 h-4 object-contain"
-              />
-              <span className="text-neutral-400 font-medium">{APP_NAME}</span>
+        <div className="max-w-6xl mx-auto">
+          {/* Animated ASCII Earthrise Visual */}
+          <div className="w-full flex flex-col items-center justify-center mb-16 pb-12 border-b border-white/5">
+            <div className="w-full max-w-3xl rounded-xl border border-white/10 bg-neutral-950/80 p-4 sm:p-6 backdrop-blur-sm shadow-2xl flex flex-col items-center">
+              <div className="w-full flex items-center justify-between text-[11px] font-mono text-neutral-500 mb-4 px-1 border-b border-white/5 pb-2">
+                <span className="flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse inline-block" />
+                  <span className="text-neutral-300">ORBIT</span> // EARTHRISE // DEEP SPACE OBSERVATORY
+                </span>
+                <span className="text-neutral-500">15 FPS // 8D TELEMETRY</span>
+              </div>
+              <div className="w-full overflow-hidden flex items-center justify-center rounded-lg bg-[#030408]">
+                <Ascii
+                  piece={earthrise}
+                  className="w-full h-auto max-h-[380px] object-contain rounded"
+                  label="Earthrise viewed from lunar orbit"
+                />
+              </div>
+              <div className="w-full flex items-center justify-between text-[11px] text-neutral-500 mt-3 px-1">
+                <span>Sound orbiting beyond limits.</span>
+                <span className="font-mono text-neutral-400">Apollo 8 Perspective</span>
+              </div>
             </div>
-            <span className="hidden sm:inline text-neutral-700">•</span>
-            <span>© 2026 Biswajit Tanti & {APP_NAME} Contributors. All rights reserved.</span>
           </div>
 
-          <div className="flex items-center gap-8">
-            <a href={APP_CONFIG.repoUrl} target="_blank" rel="noopener noreferrer" className="hover:text-neutral-300 transition">
-              GitHub
-            </a>
-            <a href={APP_CONFIG.releasesUrl} target="_blank" rel="noopener noreferrer" className="hover:text-neutral-300 transition">
-              Releases
-            </a>
-            <a href="https://github.com/biswaadev/bttune-android/blob/main/LICENSE" target="_blank" rel="noopener noreferrer" className="hover:text-neutral-300 transition">
-              GPL-3.0 License
-            </a>
-            <a href={APP_CONFIG.authorUrl} target="_blank" rel="noopener noreferrer" className="hover:text-neutral-300 transition">
-              Biswajit Tanti
-            </a>
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+            <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4">
+              <div className="flex items-center gap-2">
+                <Image
+                  src="/assets/no-bg.svg"
+                  alt={`${APP_NAME} Logo`}
+                  width={16}
+                  height={16}
+                  className="w-4 h-4 object-contain"
+                />
+                <span className="text-neutral-400 font-medium">{APP_NAME}</span>
+              </div>
+              <span className="hidden sm:inline text-neutral-700">•</span>
+              <span>
+                © 2026 Biswajit Tanti (biswaa.dev), Dev Borah (bitzzdev), &amp; {APP_NAME} Contributors.
+              </span>
+            </div>
+
+            <div className="flex items-center gap-8">
+              <a
+                href={APP_CONFIG.repoUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-neutral-300 transition"
+              >
+                GitHub
+              </a>
+              <a
+                href={APP_CONFIG.releasesUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-neutral-300 transition"
+              >
+                Releases
+              </a>
+              <a
+                href="https://github.com/biswaadev/bttune-android/blob/main/LICENSE"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-neutral-300 transition"
+              >
+                GPL-3.0 License
+              </a>
+              <a
+                href={APP_CONFIG.authorUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-neutral-300 transition"
+              >
+                biswaa.dev
+              </a>
+              <a
+                href="https://bitz.is-a.dev"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-neutral-300 transition"
+              >
+                bitzzdev
+              </a>
+            </div>
           </div>
         </div>
       </footer>

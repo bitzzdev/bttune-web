@@ -146,7 +146,23 @@ def deploy_site(project_id, site_id, out_dir="out"):
     print(f"\nSUCCESS! Site is live at: {site_url}")
     return site_url
 
+ALL_PROD_SITES = [
+    # Primary & Orbit audio brand sites
+    "orbitmusic", "orbittune", "orbitsound", "orbithz", "orbitdolby",
+    "orbitsong", "orbitaudio", "orbitstream", "orbitplayer", "orbitbeat",
+    "orbitbeats", "orbitwave", "orbitwaves", "orbitbass", "orbithifi",
+    "orbittrack", "orbittracks", "orbittunes", "orbitsounds", "orbitsongs",
+    # Developer personal / portfolio mirrors
+    "bitzzdev", "bitzdev", "bitz", "devborah", "bitupanborah",
+    "biswaadev", "biswadev", "biswajittanti",
+    # Cultural & community domains
+    "suno", "assam", "zubeen", "zubeengarg", "auno", "oryn", "veya"
+]
+
 if __name__ == "__main__":
-    sites = sys.argv[1:] if len(sys.argv) > 1 else ["orbit-sound", "orbit-audio"]
+    if len(sys.argv) > 1 and sys.argv[1] != "all":
+        sites = sys.argv[1:]
+    else:
+        sites = ALL_PROD_SITES
     for s in sites:
         deploy_site("test-netly", s)
