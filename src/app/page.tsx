@@ -813,92 +813,222 @@ export default function RedesignedLanding() {
       </section>
 
       {/* =========================================================================
-          FOOTER WITH ASCII EARTHRISE
+          FOOTER WITH ASCII EARTHRISE BACKGROUND (FULL VIEWPORT WIDTH)
           ========================================================================= */}
-      <footer className="py-20 px-8 border-t border-white/5 text-xs font-normal text-neutral-500">
-        <div className="max-w-6xl mx-auto">
-          {/* Animated ASCII Earthrise Visual */}
-          <div className="w-full flex flex-col items-center justify-center mb-16 pb-12 border-b border-white/5">
-            <div className="w-full max-w-3xl rounded-xl border border-white/10 bg-neutral-950/80 p-4 sm:p-6 backdrop-blur-sm shadow-2xl flex flex-col items-center">
-              <div className="w-full flex items-center justify-between text-[11px] font-mono text-neutral-500 mb-4 px-1 border-b border-white/5 pb-2">
-                <span className="flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse inline-block" />
-                  <span className="text-neutral-300">ORBIT</span> // EARTHRISE // DEEP SPACE OBSERVATORY
-                </span>
-                <span className="text-neutral-500">15 FPS // 8D TELEMETRY</span>
-              </div>
-              <div className="w-full overflow-hidden flex items-center justify-center rounded-lg bg-[#030408]">
-                <Ascii
-                  piece={earthrise}
-                  className="w-full h-auto max-h-[380px] object-contain rounded"
-                  label="Earthrise viewed from lunar orbit"
+      <footer className="relative w-full overflow-hidden border-t border-white/10 bg-[#030408] text-xs font-normal text-neutral-400 py-24 sm:py-28 px-6 sm:px-8">
+        {/* Full Viewport-Width Animated ASCII Earthrise Background */}
+        <div className="absolute inset-0 w-full h-full overflow-hidden pointer-events-none select-none flex items-center justify-center z-0">
+          <div className="w-full min-w-[100vw] h-full flex items-center justify-center opacity-30 sm:opacity-40 scale-105">
+            <Ascii
+              piece={earthrise}
+              className="w-full min-w-[100vw] h-full object-cover"
+              label="Earthrise viewed from lunar orbit ASCII background"
+            />
+          </div>
+          {/* Gradients to ensure text readability across all displays */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/50 to-black/95 pointer-events-none" />
+          <div className="absolute inset-0 bg-radial from-transparent via-black/30 to-black/90 pointer-events-none" />
+        </div>
+
+        {/* Footer Content Layered Directly On Top */}
+        <div className="relative z-10 max-w-6xl mx-auto space-y-16">
+          {/* Top Row: Mission & Developer Highlights */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+            <div className="lg:col-span-5 space-y-4">
+              <div className="flex items-center gap-3">
+                <Image
+                  src="/assets/no-bg.svg"
+                  alt={`${APP_NAME} Logo`}
+                  width={28}
+                  height={28}
+                  className="w-7 h-7 object-contain"
                 />
+                <span className="font-medium tracking-tight text-xl text-white">
+                  {APP_NAME}
+                </span>
+                <span className="text-[10px] font-mono uppercase tracking-widest px-2 py-0.5 rounded-full bg-white/10 text-neutral-300 border border-white/10">
+                  Open Source
+                </span>
               </div>
-              <div className="w-full flex items-center justify-between text-[11px] text-neutral-500 mt-3 px-1">
-                <span>Sound orbiting beyond limits.</span>
-                <span className="font-mono text-neutral-400">Apollo 8 Perspective</span>
+              <p className="text-sm text-neutral-300 leading-relaxed max-w-sm">
+                Subscription-free, zero-ad audio streaming client for Android with native Jetpack Compose, 8D Spatial DSP virtualization, and offline playback.
+              </p>
+              <div className="flex items-center gap-2 text-[11px] font-mono text-neutral-400 pt-1">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                <span>Earthrise Lunar Orbit Telemetry • 15 FPS</span>
+              </div>
+            </div>
+
+            <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-3 gap-8 text-xs">
+              <div className="space-y-3">
+                <p className="font-mono uppercase tracking-wider text-neutral-500 text-[11px]">
+                  Core Developers
+                </p>
+                <div className="space-y-2">
+                  <div>
+                    <a
+                      href="https://biswadev.vercel.app/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-white hover:text-white transition font-medium block"
+                    >
+                      Biswajit Tanti
+                    </a>
+                    <span className="text-[11px] font-mono text-neutral-400 block">
+                      @biswaa.dev
+                    </span>
+                    <a
+                      href="https://www.instagram.com/biswaa.dev"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[11px] text-neutral-400 hover:text-neutral-200 transition"
+                    >
+                      Instagram ↗
+                    </a>
+                  </div>
+                  <div className="pt-2 border-t border-white/5">
+                    <a
+                      href="https://bitz.is-a.dev"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-white hover:text-white transition font-medium block"
+                    >
+                      Dev Borah
+                    </a>
+                    <span className="text-[11px] font-mono text-neutral-400 block">
+                      @bitz.dev (bitzzdev)
+                    </span>
+                    <a
+                      href="https://www.instagram.com/bitz.dev"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[11px] text-neutral-400 hover:text-neutral-200 transition"
+                    >
+                      Instagram ↗
+                    </a>
+                  </div>
+                  <div className="pt-2 border-t border-white/5">
+                    <span className="text-neutral-300 font-medium block">
+                      Trisan Tanti
+                    </span>
+                    <span className="text-[11px] text-neutral-400 block">
+                      Core Android Dev
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="space-y-3">
+                <p className="font-mono uppercase tracking-wider text-neutral-500 text-[11px]">
+                  Navigation
+                </p>
+                <ul className="space-y-2 text-neutral-400">
+                  <li>
+                    <a href="#hero" className="hover:text-white transition">
+                      Overview
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#carousel-section" className="hover:text-white transition">
+                      Screenshots
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#capabilities" className="hover:text-white transition">
+                      Audio DSP &amp; Engine
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#architecture" className="hover:text-white transition">
+                      System Architecture
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#team" className="hover:text-white transition">
+                      Contributors
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#faq" className="hover:text-white transition">
+                      FAQ
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="space-y-3">
+                <p className="font-mono uppercase tracking-wider text-neutral-500 text-[11px]">
+                  Project &amp; Code
+                </p>
+                <ul className="space-y-2 text-neutral-400">
+                  <li>
+                    <a
+                      href={APP_CONFIG.repoUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-white transition"
+                    >
+                      GitHub Repository ↗
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href={APP_CONFIG.releasesUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-white transition"
+                    >
+                      GitHub Releases ↗
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://github.com/biswaadev/bttune-android/blob/main/LICENSE"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-white transition"
+                    >
+                      GPL-3.0 License ↗
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href={APP_CONFIG.directDownloadUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-white transition text-neutral-300"
+                    >
+                      Direct APK Download ↗
+                    </a>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
 
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-            <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4">
-              <div className="flex items-center gap-2">
-                <Image
-                  src="/assets/no-bg.svg"
-                  alt={`${APP_NAME} Logo`}
-                  width={16}
-                  height={16}
-                  className="w-4 h-4 object-contain"
-                />
-                <span className="text-neutral-400 font-medium">{APP_NAME}</span>
-              </div>
-              <span className="hidden sm:inline text-neutral-700">•</span>
+          {/* Bottom Bar: Copyright & Attribution */}
+          <div className="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-neutral-400 text-xs">
+            <div className="flex items-center gap-2">
+              <Image
+                src="/assets/no-bg.svg"
+                alt={`${APP_NAME} Icon`}
+                width={16}
+                height={16}
+                className="w-4 h-4 object-contain opacity-70"
+              />
               <span>
-                © 2026 Biswajit Tanti (biswaa.dev), Dev Borah (bitzzdev), &amp; {APP_NAME} Contributors.
+                © 2026 {APP_NAME}. Crafted with precision by Biswajit Tanti (biswaa.dev), Dev Borah (bitzzdev), &amp; Trisan Tanti.
               </span>
             </div>
 
-            <div className="flex items-center gap-8">
+            <div className="flex items-center gap-6 text-[11px] text-neutral-400">
+              <span>Zero Ads • Zero Telemetry</span>
+              <span>•</span>
               <a
-                href={APP_CONFIG.repoUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-neutral-300 transition"
+                href={PRIMARY_DOMAIN}
+                className="hover:text-neutral-200 transition"
               >
-                GitHub
-              </a>
-              <a
-                href={APP_CONFIG.releasesUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-neutral-300 transition"
-              >
-                Releases
-              </a>
-              <a
-                href="https://github.com/biswaadev/bttune-android/blob/main/LICENSE"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-neutral-300 transition"
-              >
-                GPL-3.0 License
-              </a>
-              <a
-                href={APP_CONFIG.authorUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-neutral-300 transition"
-              >
-                biswaa.dev
-              </a>
-              <a
-                href="https://bitz.is-a.dev"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-neutral-300 transition"
-              >
-                bitzzdev
+                orbitmusic.web.app
               </a>
             </div>
           </div>
