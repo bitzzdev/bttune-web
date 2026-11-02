@@ -20,6 +20,7 @@ import OptionWheel from "@/components/OptionWheel";
 import SpecularButton from "@/components/SpecularButton";
 import { GithubIcon } from "@/components/GithubIcon";
 import {
+  APP_NAME,
   APP_CONFIG,
   ARCHITECTURE_LAYERS,
   CAPABILITY_CATEGORIES,
@@ -264,13 +265,13 @@ export default function RedesignedLanding() {
           <Link href="#" className="flex items-center gap-3">
             <Image
               src="/assets/bttune_logo.svg"
-              alt="BTTUNE Logo"
+              alt={`${APP_NAME} Logo`}
               width={22}
               height={22}
               className="w-5 h-5 invert"
             />
             <span className="font-normal tracking-tight text-lg text-white">
-              BTTUNE
+              {APP_NAME}
             </span>
           </Link>
 
@@ -526,7 +527,7 @@ export default function RedesignedLanding() {
               Every song, dialect & genre.
             </h2>
             <p className="text-base font-normal text-neutral-400 leading-relaxed">
-              From global billboard charts to intimate regional folk traditions, indie undergrounds, classical raagas, and lo-fi tapes — BTTUNE streams the entire YouTube Music catalog without geoblocks, paywalls, or restrictions.
+              From global billboard charts to intimate regional folk traditions, indie undergrounds, classical raagas, and lo-fi tapes — {APP_NAME} streams the entire YouTube Music catalog without geoblocks, paywalls, or restrictions.
             </p>
 
             <div className="pt-4 flex items-center gap-3 text-xs text-neutral-500">
@@ -620,7 +621,7 @@ export default function RedesignedLanding() {
         </p>
 
         <h2 className="text-huge-section text-white tracking-tight mb-8">
-          Get BTTUNE Free.
+          Get {APP_NAME} Free.
         </h2>
 
         <p className="text-base md:text-lg font-normal text-neutral-400 max-w-xl mx-auto mb-12 leading-relaxed">
@@ -792,9 +793,9 @@ export default function RedesignedLanding() {
       <footer className="py-20 px-8 border-t border-white/5 text-xs font-normal text-neutral-500">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4">
-            <span className="text-neutral-400 font-medium">BTTUNE</span>
+            <span className="text-neutral-400 font-medium">{APP_NAME}</span>
             <span className="hidden sm:inline text-neutral-700">•</span>
-            <span>© 2026 Biswajit Tanti & BTTUNE Contributors. All rights reserved.</span>
+            <span>© 2026 Biswajit Tanti & {APP_NAME} Contributors. All rights reserved.</span>
           </div>
 
           <div className="flex items-center gap-8">

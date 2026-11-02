@@ -23,11 +23,13 @@ import {
   FolderHeart,
 } from "lucide-react";
 
+export const APP_NAME = "Orbit";
+
 export const APP_CONFIG = {
-  name: "BTTUNE",
+  name: APP_NAME,
   tagline: "Sound Beyond Limits.",
   subtext:
-    "An open-source, zero-ad YouTube Music client engineered with Android Material 3, 8D Spatial DSP, real-time synchronized syllable lyrics, and persistent offline audio caching.",
+    `An open-source, zero-ad YouTube Music client engineered with Android Material 3, 8D Spatial DSP, real-time synchronized syllable lyrics, and persistent offline audio caching.`,
   version: "v6.1.4",
   releaseDate: "Latest Build",
   apkSize: "14.5 MB",
@@ -93,7 +95,7 @@ export const ARCHITECTURE_LAYERS = [
     id: "ui",
     badge: "Presentation Layer",
     title: "100% Jetpack Compose & M3 Dynamic Tonal Palette",
-    desc: "Built purely declaratively without any legacy XML views. Leverages Material 3 Expressive motion curves, dynamic Monet color theming derived from album cover tones, and haptic feedback.",
+    desc: `Built purely declaratively without any legacy XML views. Leverages Material 3 Expressive motion curves, dynamic Monet color theming derived from album cover tones, and haptic feedback.`,
     features: [
       "Dynamic color extraction using Palette API",
       "Edge-to-edge immersive navigation and gestures",
@@ -257,53 +259,53 @@ export const CAPABILITY_CATEGORIES = [
 export const TEAM_MEMBERS = [
   {
     name: "Biswajit Tanti",
-    role: "Lead Android Architect & Core Maintainer",
+    role: "Lead Developer",
     avatar: "https://github.com/biswaadev.png",
-    bio: "Passionate Android Developer focused on modern Kotlin, Jetpack Compose, audio DSP architectures, and responsive Material 3 experiences.",
+    bio: "Lead Developer architecting the application core, modern Kotlin, Jetpack Compose, audio DSP engine, and overall project direction.",
     github: "https://github.com/biswaadev",
     website: "https://biswadev.vercel.app/",
   },
   {
-    name: "bitzzdev",
-    role: "Infrastructure & Audio Pipeline Contributor",
-    avatar: "https://github.com/bitzzdev.png",
-    bio: "Systems and modern mobile developer contributing to client optimizations, network efficiency, and automated release builds.",
-    github: "https://github.com/bitzzdev",
-    website: "https://bitz.is-a.dev",
-  },
-  {
     name: "Trisan Tanti",
-    role: "UI/UX & Quality Assurance Specialist",
+    role: "Code Developer",
     avatar: "https://github.com/biswaadev.png",
-    bio: "Focusing on Material 3 interaction ergonomics, animation polish, haptics feedback, and testing across diverse Android OEM devices.",
+    bio: "Focusing on Android client development, feature implementation, interaction ergonomics, and OEM testing across Android devices.",
     github: "https://github.com/biswaadev",
     website: "https://github.com/biswaadev/bttune-android",
+  },
+  {
+    name: "bitzzdev",
+    role: "UI/UX Designer & Developer (Web & Android)",
+    avatar: "https://github.com/bitzzdev.png",
+    bio: "Designing and developing UI/UX experiences for both web and Android apps, alongside client optimizations and release infrastructure.",
+    github: "https://github.com/bitzzdev",
+    website: "https://bitz.is-a.dev",
   },
 ];
 
 export const FAQ_ITEMS = [
   {
-    q: "Is BTTUNE completely free and without ads?",
-    a: "Yes! BTTUNE is 100% free, fully open-source, and contains zero commercial advertisements, zero telemetry trackers, and zero paywalls. You do not need any subscription.",
+    q: `Is ${APP_NAME} completely free and without ads?`,
+    a: `Yes! ${APP_NAME} is 100% free, fully open-source, and contains zero commercial advertisements, zero telemetry trackers, and zero paywalls. You do not need any subscription.`,
   },
   {
     q: "Do I need a Google account or YouTube Music subscription?",
-    a: "No! BTTUNE is built to function fully without any account required. You can search, play, stream, and save local playlists immediately without logging in.",
+    a: `No! ${APP_NAME} is built to function fully without any account required. You can search, play, stream, and save local playlists immediately without logging in.`,
   },
   {
     q: "Can I download songs to listen offline without internet?",
-    a: "Yes! BTTUNE features an offline caching engine. You can save full albums, playlists, or individual tracks straight into your phone's local storage for offline playback.",
+    a: `Yes! ${APP_NAME} features an offline caching engine. You can save full albums, playlists, or individual tracks straight into your phone's local storage for offline playback.`,
   },
   {
     q: "What Android versions and hardware architectures are supported?",
-    a: "BTTUNE supports Android 8.0 (API 26) through the newest Android 15 & 16. It is compiled for arm64-v8a, armeabi-v7a, and x86_64, with universal APKs also provided.",
+    a: `${APP_NAME} supports Android 8.0 (API 26) through the newest Android 15 & 16. It is compiled for arm64-v8a, armeabi-v7a, and x86_64, with universal APKs also provided.`,
   },
   {
     q: "How does the 8D Spatial Audio Virtualizer work?",
     a: "It processes stereo audio channels using Head-Related Transfer Function (HRTF) algorithms and dynamic LFO phase modulators to recreate the acoustic feeling of sound orbiting around your head in 3D space.",
   },
   {
-    q: "Is BTTUNE safe to install on my Android device?",
+    q: `Is ${APP_NAME} safe to install on my Android device?`,
     a: "100% safe! All source code is openly hosted on GitHub under an open-source license. The APKs are compiled automatically via GitHub Actions pipelines with verifiable SHA-256 hashes.",
   },
 ];

@@ -1,15 +1,16 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { APP_NAME } from "@/data/landingData";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://biswaadev.github.io"),
-  title: "BTTUNE - Stream Music Without Limits",
+  title: `${APP_NAME} - Stream Music Without Limits`,
   description:
-    "Open-source, subscription-free music streaming client engineered with Jetpack Compose, 8D Spatial DSP audio, syllable lyrics sync, and offline cache. Zero ads, zero telemetry.",
+    `Download ${APP_NAME} APK. Open-source, subscription-free music streaming client engineered with Jetpack Compose, 8D Spatial DSP audio, syllable lyrics sync, and offline cache. Zero ads, zero telemetry.`,
   keywords: [
-    "BTTUNE",
-    "BTTUNE APK",
-    "BTTUNE Android",
+    APP_NAME,
+    `${APP_NAME} APK`,
+    `${APP_NAME} Android`,
     "YouTube Music Client",
     "Free Music Streaming",
     "Ad-free Music App",
@@ -22,17 +23,17 @@ export const metadata: Metadata = {
   creator: "Biswajit Tanti",
   openGraph: {
     type: "website",
-    siteName: "BTTUNE",
+    siteName: APP_NAME,
     url: "https://biswaadev.github.io/bttune/",
-    title: "BTTUNE - Free Ad-Free Music Streaming Client for Android",
+    title: `${APP_NAME} - Free Ad-Free Music Streaming Client for Android`,
     description:
-      "Download official BTTUNE APK for Android. Jetpack Compose, Syllable Lyrics Sync, Studio Audio Quality, and Offline Cache.",
+      `Download official ${APP_NAME} APK for Android. Jetpack Compose, Syllable Lyrics Sync, Studio Audio Quality, and Offline Cache.`,
     images: [
       {
         url: "/assets/og-image.png",
         width: 512,
         height: 512,
-        alt: "BTTUNE Logo",
+        alt: `${APP_NAME} Logo`,
       },
     ],
   },
@@ -40,9 +41,9 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@biswaadev",
     creator: "@biswaadev",
-    title: "BTTUNE - Free Ad-Free Music Streaming Client for Android",
+    title: `${APP_NAME} - Free Ad-Free Music Streaming Client for Android`,
     description:
-      "Download official BTTUNE APK for Android. Jetpack Compose, Syllable Lyrics Sync, Studio Audio Quality, and Offline Cache.",
+      `Download official ${APP_NAME} APK for Android. Jetpack Compose, Syllable Lyrics Sync, Studio Audio Quality, and Offline Cache.`,
     images: ["/assets/og-image.png"],
   },
   icons: {
@@ -67,7 +68,7 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
-    name: "BTTUNE",
+    name: APP_NAME,
     operatingSystem: "Android 8.0+",
     applicationCategory: "MultimediaApplication",
     offers: {
