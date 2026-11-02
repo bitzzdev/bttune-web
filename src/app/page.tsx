@@ -264,11 +264,11 @@ export default function RedesignedLanding() {
         <div className="max-w-6xl mx-auto flex items-center justify-between">
           <Link href="#" className="flex items-center gap-3">
             <Image
-              src="/assets/bttune_logo.svg"
+              src="/assets/no-bg.svg"
               alt={`${APP_NAME} Logo`}
-              width={22}
-              height={22}
-              className="w-5 h-5 invert"
+              width={24}
+              height={24}
+              className="w-6 h-6 object-contain"
             />
             <span className="font-normal tracking-tight text-lg text-white">
               {APP_NAME}
@@ -739,6 +739,16 @@ export default function RedesignedLanding() {
                 >
                   Website
                 </a>
+                {member.instagram && (
+                  <a
+                    href={member.instagram}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xs text-neutral-400 hover:text-white transition"
+                  >
+                    Instagram
+                  </a>
+                )}
               </div>
             </div>
           ))}
@@ -793,7 +803,16 @@ export default function RedesignedLanding() {
       <footer className="py-20 px-8 border-t border-white/5 text-xs font-normal text-neutral-500">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4">
-            <span className="text-neutral-400 font-medium">{APP_NAME}</span>
+            <div className="flex items-center gap-2">
+              <Image
+                src="/assets/no-bg.svg"
+                alt={`${APP_NAME} Logo`}
+                width={16}
+                height={16}
+                className="w-4 h-4 object-contain"
+              />
+              <span className="text-neutral-400 font-medium">{APP_NAME}</span>
+            </div>
             <span className="hidden sm:inline text-neutral-700">•</span>
             <span>© 2026 Biswajit Tanti & {APP_NAME} Contributors. All rights reserved.</span>
           </div>

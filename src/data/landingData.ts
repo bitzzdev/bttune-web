@@ -264,6 +264,7 @@ export const TEAM_MEMBERS = [
     bio: "Lead Developer architecting the application core, modern Kotlin, Jetpack Compose, audio DSP engine, and overall project direction.",
     github: "https://github.com/biswaadev",
     website: "https://biswadev.vercel.app/",
+    instagram: "https://www.instagram.com/biswaa.dev",
   },
   {
     name: "Trisan Tanti",
@@ -280,6 +281,7 @@ export const TEAM_MEMBERS = [
     bio: "Designing and developing UI/UX experiences for both web and Android apps, alongside client optimizations and release infrastructure.",
     github: "https://github.com/bitzzdev",
     website: "https://bitz.is-a.dev",
+    instagram: "https://www.instagram.com/bitz.dev",
   },
 ];
 

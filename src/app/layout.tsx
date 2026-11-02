@@ -47,8 +47,12 @@ export const metadata: Metadata = {
     images: ["/assets/og-image.png"],
   },
   icons: {
-    icon: "/assets/bttune_logo.svg",
-    apple: "/assets/og-image.png",
+    icon: [
+      { url: "/assets/no-bg.svg", type: "image/svg+xml" },
+      { url: "/assets/with-bg.svg", type: "image/svg+xml" },
+    ],
+    shortcut: "/assets/no-bg.svg",
+    apple: "/assets/with-bg.svg",
   },
   manifest: "/site.webmanifest",
 };
