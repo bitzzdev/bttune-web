@@ -1,0 +1,17 @@
+{
+  "projects": {
+    "default": "test-netly"
+  },
+  "targets": {
+    "test-netly": {
+      "hosting": {
+        "orbit-sound": [
+          "orbit-sound"
+        ],
+        "orbit-audio": [
+          "orbit-audio"
+        ]
+      }
+    }
+  }
+}

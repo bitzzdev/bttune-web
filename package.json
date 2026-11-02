@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "deploy": "next build && python3 scripts/deploy.py orbit-sound orbit-audio",
     "start": "next start",
     "lint": "eslint"
   },
