@@ -1,17 +1,7 @@
 {
   "hosting": [
     {
-      "target": "orbit-sound",
-      "public": "out",
-      "ignore": [
-        "firebase.json",
-        "**/.*",
-        "**/node_modules/**"
-      ],
-      "cleanUrls": true
-    },
-    {
-      "target": "orbit-audio",
+      "target": "orbitmusic",
       "public": "out",
       "ignore": [
         "firebase.json",

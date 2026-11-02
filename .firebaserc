@@ -5,11 +5,8 @@
   "targets": {
     "test-netly": {
       "hosting": {
-        "orbit-sound": [
-          "orbit-sound"
-        ],
-        "orbit-audio": [
-          "orbit-audio"
+        "orbitmusic": [
+          "orbitmusic"
         ]
       }
     }
