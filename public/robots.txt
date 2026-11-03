@@ -2,4 +2,3 @@ User-agent: *
 Allow: /
 
 Sitemap: https://orbitmusic.web.app/sitemap.xml
-Host: https://orbitmusic.web.app
