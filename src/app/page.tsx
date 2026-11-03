@@ -320,15 +320,17 @@ export default function RedesignedLanding() {
               lineColor="#ffffff"
               baseColor="#444444"
               intensity={1}
-              idleIntensity={0.35}
-              glow={0.8}
+              idleIntensity={0.6}
+              glow={1.2}
+              speed={1.5}
+              autoAnimate={true}
               onClick={() => {
                 const el = document.getElementById("download");
                 el?.scrollIntoView({ behavior: "smooth" });
               }}
             >
               <span className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse mr-1.5 inline-block" />
-              Releasing Soon
+              Under Development
             </SpecularButton>
           </div>
 
@@ -407,34 +409,47 @@ export default function RedesignedLanding() {
             An ad-free music streaming client engineered with Jetpack Compose, 8D Spatial Audio, millisecond syllable lyrics sync, and offline caching.
           </p>
 
-          <div className="flex flex-wrap items-center justify-center gap-6">
-            <SpecularButton
-              size="lg"
-              radius={999}
-              tint="#ffffff"
-              tintOpacity={0.08}
-              textColor="#ffffff"
-              lineColor="#ffffff"
-              baseColor="#444444"
-              intensity={1}
-              idleIntensity={0.4}
-              glow={1}
-              followMouse={true}
-              proximity={220}
-              disabled={true}
-              className="cursor-not-allowed opacity-90"
-            >
-              <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse mr-2 inline-block" />
-              <span>Under Development • Releasing Soon</span>
-            </SpecularButton>
+          <div className="flex flex-col items-center">
+            <div className="flex flex-wrap items-center justify-center gap-6">
+              <SpecularButton
+                size="lg"
+                radius={999}
+                tint="#ffffff"
+                tintOpacity={0.08}
+                textColor="#ffffff"
+                lineColor="#ffffff"
+                baseColor="#444444"
+                intensity={1}
+                idleIntensity={0.6}
+                glow={1.2}
+                speed={1.5}
+                autoAnimate={true}
+                followMouse={true}
+                proximity={220}
+                onClick={() => {
+                  const el = document.getElementById("download");
+                  el?.scrollIntoView({ behavior: "smooth" });
+                }}
+              >
+                <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse mr-2.5 inline-block" />
+                <span>Under Development</span>
+              </SpecularButton>
 
-            <a
-              href="#carousel-section"
-              className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full text-neutral-300 hover:text-white transition text-sm"
-            >
-              <span>Explore Preview</span>
-              <ArrowRight className="w-4 h-4 text-neutral-500" />
-            </a>
+              <a
+                href="#carousel-section"
+                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full text-neutral-300 hover:text-white transition text-sm"
+              >
+                <span>Explore Preview</span>
+                <ArrowRight className="w-4 h-4 text-neutral-500" />
+              </a>
+            </div>
+
+            {/* Subtitle below the button */}
+            <p className="text-xs text-neutral-400 mt-3 font-normal flex items-center justify-center gap-1.5">
+              <span className="text-amber-400 font-medium">Releasing Soon</span>
+              <span className="text-neutral-600">•</span>
+              <span>Free &amp; Open Source</span>
+            </p>
           </div>
 
           <div className="mt-24 flex flex-wrap items-center justify-center gap-10 text-xs font-normal text-neutral-500">
@@ -654,7 +669,7 @@ export default function RedesignedLanding() {
           </button>
         </div>
 
-        <div className="flex flex-col items-center gap-4">
+        <div className="flex flex-col items-center">
           <SpecularButton
             size="lg"
             radius={999}
@@ -664,18 +679,26 @@ export default function RedesignedLanding() {
             lineColor="#ffffff"
             baseColor="#525252"
             intensity={1}
-            idleIntensity={0.4}
-            glow={1}
+            idleIntensity={0.6}
+            glow={1.2}
+            speed={1.5}
+            autoAnimate={true}
             followMouse={true}
             proximity={250}
-            disabled={true}
-            className="cursor-not-allowed opacity-90"
+            className="cursor-default"
           >
-            <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse mr-2 inline-block" />
-            <span>Under Development • Releasing Soon</span>
+            <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse mr-2.5 inline-block" />
+            <span>Under Development</span>
           </SpecularButton>
 
-          <p className="text-xs text-neutral-500 max-w-md mt-1">
+          {/* Subtitle below the button */}
+          <p className="text-sm text-neutral-400 mt-3 font-normal flex items-center justify-center gap-2">
+            <span className="text-amber-400 font-medium">Releasing Soon</span>
+            <span className="text-neutral-600">•</span>
+            <span>Android 8.0+ Build in Progress</span>
+          </p>
+
+          <p className="text-xs text-neutral-500 max-w-md mt-2">
             Build verification and release candidate testing in progress. Direct downloads will be unlocked soon.
           </p>
 
@@ -683,7 +706,7 @@ export default function RedesignedLanding() {
             href={APP_CONFIG.releasesUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 text-xs text-neutral-500 hover:text-neutral-300 transition mt-3"
+            className="inline-flex items-center gap-1.5 text-xs text-neutral-500 hover:text-neutral-300 transition mt-4"
           >
             <span>GitHub Releases History</span>
             <ArrowRight className="w-3.5 h-3.5 text-neutral-500" />
