@@ -10,7 +10,10 @@ import time
 from concurrent.futures import ThreadPoolExecutor
 
 def get_access_token():
-    return subprocess.check_output(["gcloud", "auth", "print-access-token"]).decode().strip()
+    try:
+        return subprocess.check_output(["gcloud", "auth", "application-default", "print-access-token"]).decode().strip()
+    except Exception:
+        return subprocess.check_output(["gcloud", "auth", "print-access-token"]).decode().strip()
 
 def collect_files(out_dir):
     files = {}
@@ -29,9 +32,10 @@ def collect_files(out_dir):
             }
     return files
 
-def request_with_retry(req, max_retries=5):
+def request_with_retry(req_factory, max_retries=5):
     for attempt in range(max_retries):
         try:
+            req = req_factory() if callable(req_factory) else req_factory
             with urllib.request.urlopen(req, timeout=30) as resp:
                 return resp.read().decode()
         except Exception as e:
@@ -153,7 +157,8 @@ IMMUTABLE_PROTECTED_SITES = {
     # Biswajit Domains
     "biswaadev", "biswadev", "biswajittanti",
     # Cultural & Regional Heritage Domains
-    "assam", "zubeen", "zubeengarg", "suno", "auno", "oryn", "veya"
+    "assam", "zubeen", "zubeengarg", "suno", "auno", "oryn", "veya",
+    "xongeet", "xobdo", "modhur", "hurola", "xuria", "xurmodhur"
 }
 
 DEV_SITES = [
@@ -173,7 +178,8 @@ ALL_PROD_SITES = [
     "bitzzdev", "bitzdev", "bitz", "devborah", "bitupanborah",
     "biswaadev", "biswadev", "biswajittanti",
     # Cultural & community domains (PROTECTED)
-    "suno", "assam", "zubeen", "zubeengarg", "auno", "oryn", "veya"
+    "suno", "assam", "zubeen", "zubeengarg", "auno", "oryn", "veya",
+    "xongeet", "xobdo", "modhur", "hurola", "xuria", "xurmodhur"
 ]
 
 if __name__ == "__main__":
