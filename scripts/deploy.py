@@ -152,11 +152,11 @@ DEV_SITES = [
 ]
 
 ALL_PROD_SITES = [
-    # Primary & Orbit audio brand sites
-    "orbitmusic", "orbittune", "orbitsound", "orbithz", "orbitdolby",
-    "orbitsong", "orbitaudio", "orbitstream", "orbitplayer", "orbitbeat",
-    "orbitbeats", "orbitwave", "orbitwaves", "orbitbass", "orbithifi",
-    "orbittrack", "orbittracks", "orbittunes", "orbitsounds", "orbitsongs",
+    # Primary & Orb audio brand sites
+    "orbmusic", "orbtune", "orbsound", "orbhz", "orbdolby",
+    "orbsong", "orbaudio", "orbstream", "orbplayer", "orbbeat",
+    "orbbeats", "orbwave", "orbwaves", "orbbass", "orbhifi",
+    "orbtrack", "orbtracks", "orbtunes", "orbsounds", "orbsongs",
     # Developer personal / portfolio mirrors
     "bitzzdev", "bitzdev", "bitz", "devborah", "bitupanborah",
     "biswaadev", "biswadev", "biswajittanti",

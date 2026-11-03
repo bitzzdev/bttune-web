@@ -31,9 +31,12 @@ export const metadata: Metadata = {
     `${APP_NAME} Android`,
     `${APP_NAME} Music Player`,
     `${APP_NAME} App`,
+    "Orb Music",
+    "OrbTune",
+    "Orb Sound",
+    "Orb Audio",
+    "Orb Player",
     "Orbit Music",
-    "OrbitTune",
-    "Orbit Sound",
     "YouTube Music Client",
     "Free Music Streaming",
     "Ad-free Music App",
@@ -59,7 +62,7 @@ export const metadata: Metadata = {
     { name: "Trisan Tanti", url: "https://github.com/biswaadev" },
   ],
   creator: "Biswajit Tanti (biswaa.dev) & Dev Borah (Bitupan Borah / bitzzdev)",
-  publisher: "Orbit Open Source Audio Team",
+  publisher: "Orb Open Source Audio Team",
   alternates: {
     canonical: `${PRIMARY_DOMAIN}/`,
     languages: {
@@ -129,10 +132,11 @@ export default function RootLayout({
     "@type": "SoftwareApplication",
     name: APP_NAME,
     alternateName: [
+      "Orb Music",
+      "Orb Audio",
+      "Orb Player",
+      "OrbTune",
       "Orbit Music",
-      "Orbit Audio",
-      "Orbit Player",
-      "OrbitTune",
       "BTtune",
     ],
     operatingSystem: "Android 8.0+ (Oreo through Android 15 & 16)",
@@ -201,7 +205,7 @@ export default function RootLayout({
     "@type": "WebSite",
     name: APP_NAME,
     url: `${PRIMARY_DOMAIN}/`,
-    alternateName: ["Orbit Music", "Orbit Player", "OrbitTune"],
+    alternateName: ["Orb Music", "Orb Player", "OrbTune", "Orbit Music"],
     potentialAction: {
       "@type": "SearchAction",
       target: {

@@ -23,32 +23,34 @@ import {
   FolderHeart,
 } from "lucide-react";
 
-export const APP_NAME = "Orbit";
+export const APP_NAME = "Orb";
 
-export const PRIMARY_DOMAIN = "https://orbitmusic.web.app";
+export const PRIMARY_DOMAIN = "https://orbmusic.web.app";
 
-export const ORBIT_DOMAINS = [
-  "orbitmusic.web.app",
-  "orbittune.web.app",
-  "orbitsound.web.app",
-  "orbithz.web.app",
-  "orbitdolby.web.app",
-  "orbitsong.web.app",
-  "orbitaudio.web.app",
-  "orbitstream.web.app",
-  "orbitplayer.web.app",
-  "orbitbeat.web.app",
-  "orbitbeats.web.app",
-  "orbitwave.web.app",
-  "orbitwaves.web.app",
-  "orbitbass.web.app",
-  "orbithifi.web.app",
-  "orbittrack.web.app",
-  "orbittracks.web.app",
-  "orbittunes.web.app",
-  "orbitsounds.web.app",
-  "orbitsongs.web.app",
+export const ORB_DOMAINS = [
+  "orbmusic.web.app",
+  "orbtune.web.app",
+  "orbsound.web.app",
+  "orbhz.web.app",
+  "orbdolby.web.app",
+  "orbsong.web.app",
+  "orbaudio.web.app",
+  "orbstream.web.app",
+  "orbplayer.web.app",
+  "orbbeat.web.app",
+  "orbbeats.web.app",
+  "orbwave.web.app",
+  "orbwaves.web.app",
+  "orbbass.web.app",
+  "orbhifi.web.app",
+  "orbtrack.web.app",
+  "orbtracks.web.app",
+  "orbtunes.web.app",
+  "orbsounds.web.app",
+  "orbsongs.web.app",
 ];
+
+export const ORBIT_DOMAINS = ORB_DOMAINS;
 
 export const DEVELOPER_DOMAINS = [
   "bitzzdev.web.app",
@@ -281,7 +283,7 @@ export const CAPABILITY_CATEGORIES = [
     items: [
       {
         title: "8D Virtual Surround",
-        desc: "Pans sound around your head in 360-degree acoustic orbits using HRTF simulation.",
+        desc: "Pans sound around your head in 360-degree spherical acoustic space using HRTF simulation.",
         badge: "Spatializer",
       },
       {

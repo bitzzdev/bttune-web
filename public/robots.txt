@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://orbitmusic.web.app/sitemap.xml
+Sitemap: https://orbmusic.web.app/sitemap.xml
