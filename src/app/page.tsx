@@ -1051,13 +1051,13 @@ export default function RedesignedLanding() {
                 href={PRIMARY_DOMAIN}
                 className="hover:text-neutral-200 transition"
               >
-                oroni.web.app
+                orini.web.app
               </a>
             </div>
           </div>
         </div>
 
-        {/* Giant Cropped "Oroni" Display Wordmark Half Going Off-Screen */}
+        {/* Giant Cropped "Orini" Display Wordmark Half Going Off-Screen */}
         <div className="relative w-full flex justify-center items-start select-none pointer-events-none overflow-hidden h-[11.5vw] mt-4 sm:mt-6">
           <span className="text-[22vw] font-bold tracking-tighter leading-none bg-gradient-to-b from-white/15 via-white/[0.08] to-transparent bg-clip-text text-transparent inline-block whitespace-nowrap text-center">
             {APP_NAME}

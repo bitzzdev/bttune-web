@@ -5,8 +5,8 @@
   "targets": {
     "test-netly": {
       "hosting": {
-        "oroni": [
-          "oroni"
+        "orini": [
+          "orini"
         ]
       }
     }

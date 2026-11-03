@@ -23,11 +23,12 @@ import {
   FolderHeart,
 } from "lucide-react";
 
-export const APP_NAME = "Oroni";
+export const APP_NAME = "Orini";
 
-export const PRIMARY_DOMAIN = "https://oroni.web.app";
+export const PRIMARY_DOMAIN = "https://orini.web.app";
 
-export const ORONI_DOMAINS = [
+export const ORINI_DOMAINS = [
+  "orini.web.app",
   "oroni.web.app",
   "oronimusic.web.app",
   "oronitune.web.app",
@@ -43,8 +44,9 @@ export const ORONI_DOMAINS = [
   "orbmusic.web.app",
 ];
 
-export const ORB_DOMAINS = ORONI_DOMAINS;
-export const ORBIT_DOMAINS = ORONI_DOMAINS;
+export const ORONI_DOMAINS = ORINI_DOMAINS;
+export const ORB_DOMAINS = ORINI_DOMAINS;
+export const ORBIT_DOMAINS = ORINI_DOMAINS;
 
 export const DEVELOPER_DOMAINS = [
   "bitzzdev.web.app",

@@ -162,17 +162,18 @@ IMMUTABLE_PROTECTED_SITES = {
 }
 
 DEV_SITES = [
+    "orini",
     "oroni",
     "bitzzdev",
     "devborah"
 ]
 
 ALL_PROD_SITES = [
-    # Primary & Oroni audio brand suite
-    "oroni", "oronimusic", "oronitune", "oronisound", "oroniaudio",
+    # Primary & Orini / Oroni audio brand suite
+    "orini", "oroni", "oronimusic", "oronitune", "oronisound", "oroniaudio",
     "oroniplayer", "oroniwave", "oronistream", "oronitrack", "oroniapp",
     "oronihifi", "oronibeat",
-    # Legacy Orb brand (kept active)
+    # Legacy mirror
     "orbmusic",
     # Developer personal / portfolio mirrors (PROTECTED)
     "bitzzdev", "bitzdev", "bitz", "devborah", "bitupanborah",

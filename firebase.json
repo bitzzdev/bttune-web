@@ -1,7 +1,7 @@
 {
   "hosting": [
     {
-      "target": "oroni",
+      "target": "orini",
       "public": "out",
       "ignore": [
         "firebase.json",
