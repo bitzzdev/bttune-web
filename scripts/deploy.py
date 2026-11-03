@@ -146,6 +146,16 @@ def deploy_site(project_id, site_id, out_dir="out"):
     print(f"\nSUCCESS! Site is live at: {site_url}")
     return site_url
 
+# NEVER DELETE OR UNBIND THESE SITES UNDER ANY CIRCUMSTANCE:
+IMMUTABLE_PROTECTED_SITES = {
+    # Core Founder / Developer Domains
+    "bitzdev", "bitzzdev", "bitz", "devborah", "bitupanborah",
+    # Biswajit Domains
+    "biswaadev", "biswadev", "biswajittanti",
+    # Cultural & Regional Heritage Domains
+    "assam", "zubeen", "zubeengarg", "suno", "auno", "oryn", "veya"
+}
+
 DEV_SITES = [
     "oroni",
     "bitzzdev",
@@ -159,10 +169,10 @@ ALL_PROD_SITES = [
     "oronihifi", "oronibeat",
     # Legacy Orb brand (kept active)
     "orbmusic",
-    # Developer personal / portfolio mirrors
+    # Developer personal / portfolio mirrors (PROTECTED)
     "bitzzdev", "bitzdev", "bitz", "devborah", "bitupanborah",
     "biswaadev", "biswadev", "biswajittanti",
-    # Cultural & community domains
+    # Cultural & community domains (PROTECTED)
     "suno", "assam", "zubeen", "zubeengarg", "auno", "oryn", "veya"
 ]
 
