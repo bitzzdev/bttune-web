@@ -12,11 +12,6 @@
       "sizes": "any",
       "type": "image/svg+xml",
       "purpose": "any maskable"
-    },
-    {
-      "src": "assets/no-bg.svg",
-      "sizes": "any",
-      "type": "image/svg+xml"
     }
   ]
 }
