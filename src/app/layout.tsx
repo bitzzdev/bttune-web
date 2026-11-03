@@ -113,6 +113,9 @@ export const metadata: Metadata = {
     apple: "/assets/with-bg.svg",
   },
   manifest: "/site.webmanifest",
+  verification: {
+    google: "0Vp-A-VHoH6ip6wBqsRfAu7KfiGuoBwy9l3qscPk5gw",
+  },
   category: "MultimediaApplication",
 };
 
