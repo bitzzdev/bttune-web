@@ -119,7 +119,10 @@ export const metadata: Metadata = {
   },
   manifest: "/site.webmanifest",
   verification: {
-    google: "0Vp-A-VHoH6ip6wBqsRfAu7KfiGuoBwy9l3qscPk5gw",
+    google: [
+      "KFD9cIxo2RsAlYQTGyfqgpOkul8s6nYPEhyXnrhzZa4",
+      "0Vp-A-VHoH6ip6wBqsRfAu7KfiGuoBwy9l3qscPk5gw",
+    ],
   },
   category: "MultimediaApplication",
 };
