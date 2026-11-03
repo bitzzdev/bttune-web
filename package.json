@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "deploy": "next build && python3 scripts/deploy.py all",
+    "deploy:dev": "next build && python3 scripts/deploy.py dev",
     "start": "next start",
     "lint": "eslint"
   },

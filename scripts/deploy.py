@@ -146,6 +146,11 @@ def deploy_site(project_id, site_id, out_dir="out"):
     print(f"\nSUCCESS! Site is live at: {site_url}")
     return site_url
 
+DEV_SITES = [
+    "bitzzdev",
+    "devborah"
+]
+
 ALL_PROD_SITES = [
     # Primary & Orbit audio brand sites
     "orbitmusic", "orbittune", "orbitsound", "orbithz", "orbitdolby",
@@ -160,8 +165,13 @@ ALL_PROD_SITES = [
 ]
 
 if __name__ == "__main__":
-    if len(sys.argv) > 1 and sys.argv[1] != "all":
-        sites = sys.argv[1:]
+    if len(sys.argv) > 1:
+        if sys.argv[1] == "dev":
+            sites = DEV_SITES
+        elif sys.argv[1] == "all":
+            sites = ALL_PROD_SITES
+        else:
+            sites = sys.argv[1:]
     else:
         sites = ALL_PROD_SITES
     for s in sites:

@@ -311,25 +311,13 @@ export default function RedesignedLanding() {
               <GithubIcon className="w-4 h-4" />
             </a>
 
-            <SpecularButton
-              size="sm"
-              radius={999}
-              tint="#ffffff"
-              tintOpacity={0.12}
-              textColor="#ffffff"
-              lineColor="#ffffff"
-              baseColor="#444444"
-              intensity={1}
-              idleIntensity={0.35}
-              glow={0.8}
-              onClick={() => {
-                triggerDownloadCelebration();
-                window.location.href = liveRelease.downloadUrl;
-              }}
+            <a
+              href="#download"
+              className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs text-neutral-300 hover:text-white transition"
             >
-              <Download className="w-3.5 h-3.5 mr-1" />
-              Download
-            </SpecularButton>
+              <span className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse" />
+              <span>Releasing Soon</span>
+            </a>
           </div>
 
           <button
@@ -364,9 +352,10 @@ export default function RedesignedLanding() {
             <a
               href="#download"
               onClick={() => setMobileMenuOpen(false)}
-              className="text-white font-normal"
+              className="inline-flex items-center gap-2 text-neutral-400 font-normal hover:text-white transition"
             >
-              Download APK
+              <span className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse" />
+              <span>Releasing Soon</span>
             </a>
           </div>
         )}
@@ -407,28 +396,10 @@ export default function RedesignedLanding() {
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-6">
-            {/* SpecularButton from React Bits as Main CTA */}
-            <SpecularButton
-              size="lg"
-              radius={999}
-              tint="#ffffff"
-              tintOpacity={0.08}
-              textColor="#ffffff"
-              lineColor="#ffffff"
-              baseColor="#444444"
-              intensity={1}
-              idleIntensity={0.4}
-              glow={1}
-              followMouse={true}
-              proximity={220}
-              onClick={() => {
-                triggerDownloadCelebration();
-                window.location.href = "#download";
-              }}
-            >
-              <Download className="w-4 h-4" />
-              <span>Download APK Free</span>
-            </SpecularButton>
+            <div className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full bg-white/[0.05] border border-white/10 text-neutral-300 text-sm font-normal cursor-not-allowed select-none">
+              <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse" />
+              <span>Under Development • Releasing Soon</span>
+            </div>
 
             <a
               href="#carousel-section"
@@ -657,35 +628,19 @@ export default function RedesignedLanding() {
         </div>
 
         <div className="flex flex-col items-center gap-4">
-          <SpecularButton
-            size="lg"
-            radius={999}
-            tint="#ffffff"
-            tintOpacity={0.08}
-            textColor="#ffffff"
-            lineColor="#ffffff"
-            baseColor="#525252"
-            intensity={1}
-            idleIntensity={0.4}
-            glow={1}
-            followMouse={true}
-            proximity={250}
-            onClick={() => {
-              triggerDownloadCelebration();
-              window.location.href = liveRelease.downloadUrl;
-            }}
-          >
-            <Download className="w-5 h-5" />
-            <span>
-              Download APK ({selectedApkVariant === "arm64" ? liveRelease.arm64Size : liveRelease.universalSize})
-            </span>
-          </SpecularButton>
+          <div className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-white/[0.04] border border-white/10 text-neutral-300 text-sm font-normal cursor-not-allowed select-none shadow-lg">
+            <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse" />
+            <span>Under Development • Releasing Soon</span>
+          </div>
+          <p className="text-xs text-neutral-500 max-w-md mt-1">
+            Build verification and release candidate testing in progress. Direct downloads will be unlocked soon.
+          </p>
 
           <a
             href={APP_CONFIG.releasesUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 text-xs text-neutral-500 hover:text-neutral-300 transition mt-4"
+            className="inline-flex items-center gap-1.5 text-xs text-neutral-500 hover:text-neutral-300 transition mt-3"
           >
             <span>GitHub Releases History</span>
             <ArrowRight className="w-3.5 h-3.5 text-neutral-500" />
@@ -979,15 +934,10 @@ export default function RedesignedLanding() {
                     </a>
                   </li>
                   <li>
-                    <a
-                      href={APP_CONFIG.directDownloadUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1 hover:text-white transition text-neutral-300"
-                    >
-                      <span>Direct APK Download</span>
-                      <ArrowUpRight className="w-3 h-3 text-neutral-500" />
-                    </a>
+                    <span className="inline-flex items-center gap-1.5 text-neutral-500 text-xs">
+                      <span className="w-1.5 h-1.5 rounded-full bg-amber-400/80 animate-pulse" />
+                      <span>APK Releasing Soon</span>
+                    </span>
                   </li>
                 </ul>
               </div>
