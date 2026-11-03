@@ -1,7 +1,7 @@
 {
   "hosting": [
     {
-      "target": "orbmusic",
+      "target": "oroni",
       "public": "out",
       "ignore": [
         "firebase.json",

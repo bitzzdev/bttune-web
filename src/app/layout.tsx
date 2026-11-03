@@ -31,9 +31,13 @@ export const metadata: Metadata = {
     `${APP_NAME} Android`,
     `${APP_NAME} Music Player`,
     `${APP_NAME} App`,
+    "Oroni",
+    "Oroni Music",
+    "Oroni App",
+    "Oroni Player",
+    "Oroni Audio",
+    "OroniTune",
     "Orb Music",
-    "OrbTune",
-    "Orb Sound",
     "Orb Audio",
     "Orb Player",
     "Orbit Music",
@@ -62,7 +66,7 @@ export const metadata: Metadata = {
     { name: "Trisan Tanti", url: "https://github.com/biswaadev" },
   ],
   creator: "Biswajit Tanti (biswaa.dev) & Dev Borah (Bitupan Borah / bitzzdev)",
-  publisher: "Orb Open Source Audio Team",
+  publisher: "Oroni Open Source Audio Team",
   alternates: {
     canonical: `${PRIMARY_DOMAIN}/`,
     languages: {
@@ -132,6 +136,10 @@ export default function RootLayout({
     "@type": "SoftwareApplication",
     name: APP_NAME,
     alternateName: [
+      "Oroni Music",
+      "Oroni Audio",
+      "Oroni Player",
+      "OroniTune",
       "Orb Music",
       "Orb Audio",
       "Orb Player",
@@ -205,7 +213,7 @@ export default function RootLayout({
     "@type": "WebSite",
     name: APP_NAME,
     url: `${PRIMARY_DOMAIN}/`,
-    alternateName: ["Orb Music", "Orb Player", "OrbTune", "Orbit Music"],
+    alternateName: ["Oroni Music", "Oroni Player", "Orb Music", "Orbit Music"],
     potentialAction: {
       "@type": "SearchAction",
       target: {

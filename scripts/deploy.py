@@ -147,16 +147,18 @@ def deploy_site(project_id, site_id, out_dir="out"):
     return site_url
 
 DEV_SITES = [
+    "oroni",
     "bitzzdev",
     "devborah"
 ]
 
 ALL_PROD_SITES = [
-    # Primary & Orb audio brand sites
-    "orbmusic", "orbtune", "orbsound", "orbhz", "orbdolby",
-    "orbsong", "orbaudio", "orbstream", "orbplayer", "orbbeat",
-    "orbbeats", "orbwave", "orbwaves", "orbbass", "orbhifi",
-    "orbtrack", "orbtracks", "orbtunes", "orbsounds", "orbsongs",
+    # Primary & Oroni audio brand suite
+    "oroni", "oronimusic", "oronitune", "oronisound", "oroniaudio",
+    "oroniplayer", "oroniwave", "oronistream", "oronitrack", "oroniapp",
+    "oronihifi", "oronibeat",
+    # Legacy Orb brand (kept active)
+    "orbmusic",
     # Developer personal / portfolio mirrors
     "bitzzdev", "bitzdev", "bitz", "devborah", "bitupanborah",
     "biswaadev", "biswadev", "biswajittanti",

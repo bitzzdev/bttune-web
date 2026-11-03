@@ -23,34 +23,28 @@ import {
   FolderHeart,
 } from "lucide-react";
 
-export const APP_NAME = "Orb";
+export const APP_NAME = "Oroni";
 
-export const PRIMARY_DOMAIN = "https://orbmusic.web.app";
+export const PRIMARY_DOMAIN = "https://oroni.web.app";
 
-export const ORB_DOMAINS = [
+export const ORONI_DOMAINS = [
+  "oroni.web.app",
+  "oronimusic.web.app",
+  "oronitune.web.app",
+  "oronisound.web.app",
+  "oroniaudio.web.app",
+  "oroniplayer.web.app",
+  "oroniwave.web.app",
+  "oronistream.web.app",
+  "oronitrack.web.app",
+  "oroniapp.web.app",
+  "oronihifi.web.app",
+  "oronibeat.web.app",
   "orbmusic.web.app",
-  "orbtune.web.app",
-  "orbsound.web.app",
-  "orbhz.web.app",
-  "orbdolby.web.app",
-  "orbsong.web.app",
-  "orbaudio.web.app",
-  "orbstream.web.app",
-  "orbplayer.web.app",
-  "orbbeat.web.app",
-  "orbbeats.web.app",
-  "orbwave.web.app",
-  "orbwaves.web.app",
-  "orbbass.web.app",
-  "orbhifi.web.app",
-  "orbtrack.web.app",
-  "orbtracks.web.app",
-  "orbtunes.web.app",
-  "orbsounds.web.app",
-  "orbsongs.web.app",
 ];
 
-export const ORBIT_DOMAINS = ORB_DOMAINS;
+export const ORB_DOMAINS = ORONI_DOMAINS;
+export const ORBIT_DOMAINS = ORONI_DOMAINS;
 
 export const DEVELOPER_DOMAINS = [
   "bitzzdev.web.app",
