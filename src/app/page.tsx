@@ -311,13 +311,25 @@ export default function RedesignedLanding() {
               <GithubIcon className="w-4 h-4" />
             </a>
 
-            <a
-              href="#download"
-              className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs text-neutral-300 hover:text-white transition"
+            <SpecularButton
+              size="sm"
+              radius={999}
+              tint="#ffffff"
+              tintOpacity={0.12}
+              textColor="#ffffff"
+              lineColor="#ffffff"
+              baseColor="#444444"
+              intensity={1}
+              idleIntensity={0.35}
+              glow={0.8}
+              onClick={() => {
+                const el = document.getElementById("download");
+                el?.scrollIntoView({ behavior: "smooth" });
+              }}
             >
-              <span className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse" />
-              <span>Releasing Soon</span>
-            </a>
+              <span className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse mr-1.5 inline-block" />
+              Releasing Soon
+            </SpecularButton>
           </div>
 
           <button
@@ -396,10 +408,25 @@ export default function RedesignedLanding() {
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-6">
-            <div className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full bg-white/[0.05] border border-white/10 text-neutral-300 text-sm font-normal cursor-not-allowed select-none">
-              <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse" />
+            <SpecularButton
+              size="lg"
+              radius={999}
+              tint="#ffffff"
+              tintOpacity={0.08}
+              textColor="#ffffff"
+              lineColor="#ffffff"
+              baseColor="#444444"
+              intensity={1}
+              idleIntensity={0.4}
+              glow={1}
+              followMouse={true}
+              proximity={220}
+              disabled={true}
+              className="cursor-not-allowed opacity-90"
+            >
+              <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse mr-2 inline-block" />
               <span>Under Development • Releasing Soon</span>
-            </div>
+            </SpecularButton>
 
             <a
               href="#carousel-section"
@@ -628,10 +655,26 @@ export default function RedesignedLanding() {
         </div>
 
         <div className="flex flex-col items-center gap-4">
-          <div className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-white/[0.04] border border-white/10 text-neutral-300 text-sm font-normal cursor-not-allowed select-none shadow-lg">
-            <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse" />
+          <SpecularButton
+            size="lg"
+            radius={999}
+            tint="#ffffff"
+            tintOpacity={0.08}
+            textColor="#ffffff"
+            lineColor="#ffffff"
+            baseColor="#525252"
+            intensity={1}
+            idleIntensity={0.4}
+            glow={1}
+            followMouse={true}
+            proximity={250}
+            disabled={true}
+            className="cursor-not-allowed opacity-90"
+          >
+            <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse mr-2 inline-block" />
             <span>Under Development • Releasing Soon</span>
-          </div>
+          </SpecularButton>
+
           <p className="text-xs text-neutral-500 max-w-md mt-1">
             Build verification and release candidate testing in progress. Direct downloads will be unlocked soon.
           </p>
