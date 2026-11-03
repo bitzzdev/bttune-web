@@ -137,6 +137,7 @@ const MUSIC_CATALOG_GENRES = [
 export default function RedesignedLanding() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [hideNavLinks, setHideNavLinks] = useState(false);
   const [selectedArch, setSelectedArch] = useState(ARCHITECTURE_LAYERS[0].id);
   const [selectedCapabilityTab, setSelectedCapabilityTab] = useState(
     CAPABILITY_CATEGORIES[0].id
@@ -154,9 +155,21 @@ export default function RedesignedLanding() {
   const [selectedApkVariant, setSelectedApkVariant] = useState<"arm64" | "universal">("arm64");
 
   useEffect(() => {
+    let lastScrollY = window.scrollY;
+
     const handleScroll = () => {
-      setScrolled(window.scrollY > 40);
+      const currentScrollY = window.scrollY;
+      setScrolled(currentScrollY > 40);
+
+      // On desktop, scroll nav links out of screen when scrolling down, bring back when scrolling up
+      if (currentScrollY > lastScrollY && currentScrollY > 50) {
+        setHideNavLinks(true);
+      } else if (currentScrollY < lastScrollY || currentScrollY <= 40) {
+        setHideNavLinks(false);
+      }
+      lastScrollY = currentScrollY;
     };
+
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -279,7 +292,13 @@ export default function RedesignedLanding() {
             </span>
           </Link>
 
-          <nav className="hidden md:flex items-center gap-8 text-sm font-normal text-neutral-400">
+          <nav
+            className={`hidden md:flex items-center gap-8 text-sm font-normal text-neutral-400 transition-all duration-300 ease-in-out ${
+              hideNavLinks
+                ? "-translate-y-20 opacity-0 pointer-events-none"
+                : "translate-y-0 opacity-100 pointer-events-auto"
+            }`}
+          >
             <a href="#hero" className="hover:text-white transition">
               Overview
             </a>
